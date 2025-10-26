@@ -362,7 +362,7 @@ def load_dataset(
     print("Loading dataset ...")
 
     if dataset_type == "CustomDataset":
-        rel_data_path = str(f'/home/yl4579/F5-TTS-diff/F5-TTS-DMD-flow-ds/data/{dataset_name}_{tokenizer}')
+        rel_data_path = str(files("f5_tts").joinpath(f"../../data/{dataset_name}_{tokenizer}"))
         if 'LibriTTS_100_360_500_char_pinyin' in rel_data_path:
             rel_data_path = rel_data_path.replace('LibriTTS_100_360_500_char_pinyin', 'LibriTTS_100_360_500_char')
         if audio_type == "raw":
